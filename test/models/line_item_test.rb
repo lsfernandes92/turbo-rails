@@ -60,4 +60,8 @@ class LineItemTest < ActiveSupport::TestCase
       assert_no_text @line_item.name
     end
   end
+
+  test "#total_price returns the total price of the line item" do
+    assert_equal 250, line_items(:catering_today).total_price
+  end
 end
